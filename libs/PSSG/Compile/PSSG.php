@@ -181,6 +181,20 @@ class PSSG
      */
     public function getCompiledFile($file_name)
     {
+        $file_name = $this->getOutFile($file_name);
+        return $this->replaceExt($file_name);
+    }
+    /* ----------------------------------------- */
+
+    /**
+     * +-- ファイルの置き場所を返す
+     *
+     * @access      public
+     * @param  string $file_name
+     * @return string
+     */
+    public function getOutFile($file_name)
+    {
         if (!is_file($file_name)) {
             return false;
         }
@@ -190,9 +204,11 @@ class PSSG
         is_dir($real_out_dir) OR mkdir($real_out_dir, 0777, true);
         $file_name = $real_out_dir.basename($file_name);
 
-        return $this->replaceExt($file_name);
+        return $file_name;
     }
     /* ----------------------------------------- */
+
+
 
     /**
      * +-- 拡張子の置き換え

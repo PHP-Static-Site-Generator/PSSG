@@ -1,57 +1,57 @@
-” —pˆÓ‚³‚ê‚Ä‚¢‚éƒhƒ‰ƒCƒo[
+ï¼ƒ ç”¨æ„ã•ã‚Œã¦ã„ã‚‹ãƒ‰ãƒ©ã‚¤ãƒãƒ¼
 
-## Smarty ƒhƒ‰ƒCƒo[
-ƒeƒ“ƒvƒŒ[ƒgƒGƒ“ƒWƒ“[Smarty](http://www.smarty.net/download)‚ðŽg‚Á‚ÄAƒeƒ“ƒvƒŒ[ƒg‚ðƒRƒ“ƒpƒCƒ‹‚µ‚Ü‚·B
+## Smarty ãƒ‰ãƒ©ã‚¤ãƒãƒ¼
+ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚¨ãƒ³ã‚¸ãƒ³[Smarty](http://www.smarty.net/download)ã‚’ä½¿ã£ã¦ã€ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚’ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã—ã¾ã™ã€‚
 
- * ƒ\[ƒXŠg’£Žq
+ * ã‚½ãƒ¼ã‚¹æ‹¡å¼µå­
   * .tpl
- * ƒRƒ“ƒpƒCƒ‹ŒãŠg’£Žq
+ * ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«å¾Œæ‹¡å¼µå­
    * .html
 
-## Smarty + YAMLƒhƒ‰ƒCƒo[
-ƒeƒ“ƒvƒŒ[ƒgƒGƒ“ƒWƒ“[Smarty](http://www.smarty.net/download)‚ðŽg‚Á‚ÄAƒeƒ“ƒvƒŒ[ƒg‚ðƒRƒ“ƒpƒCƒ‹‚·‚é‚Æ‚±‚ë‚ÍA
-Smarty ƒhƒ‰ƒCƒo[‚Æ“¯‚¶‚Å‚·‚ªAymlƒtƒ@ƒCƒ‹‚©‚çAƒeƒ“ƒvƒŒ[ƒg‚É•Ï”‚ð“n‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+## Smarty + YAMLãƒ‰ãƒ©ã‚¤ãƒãƒ¼
+ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚¨ãƒ³ã‚¸ãƒ³[Smarty](http://www.smarty.net/download)ã‚’ä½¿ã£ã¦ã€ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚’ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã™ã‚‹ã¨ã“ã‚ã¯ã€
+Smarty ãƒ‰ãƒ©ã‚¤ãƒãƒ¼ã¨åŒã˜ã§ã™ãŒã€ymlãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã€ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã«å¤‰æ•°ã‚’æ¸¡ã™ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-.tpl.yml‚ÍˆÈ‰º‚ÌƒtƒH[ƒ}ƒbƒg‚Å‹Lq‚µ‚Ü‚·B
+.tpl.ymlã¯ä»¥ä¸‹ã®ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆã§è¨˜è¿°ã—ã¾ã™ã€‚
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# ŽÀÛ‚Ìƒeƒ“ƒvƒŒ[ƒgƒtƒ@ƒCƒ‹
+# å®Ÿéš›ã®ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãƒ•ã‚¡ã‚¤ãƒ«
 file_name: index.tpl
 
-# “n‚·•Ï”
+# æ¸¡ã™å¤‰æ•°
 page_variables:
   header_title: 'Hello PSSG World.'
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-page_variables‚ÍA`{%$page.header_title%}`‚Ì‚æ‚¤‚ÉŽQÆ‚Å‚«‚Ü‚·B
+page_variablesã¯ã€`{%$page.header_title%}`ã®ã‚ˆã†ã«å‚ç…§ã§ãã¾ã™ã€‚
 
- * ƒ\[ƒXŠg’£Žq
+ * ã‚½ãƒ¼ã‚¹æ‹¡å¼µå­
   * .tpl.yml
- * ƒRƒ“ƒpƒCƒ‹ŒãŠg’£Žq
+ * ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«å¾Œæ‹¡å¼µå­
    * .html
 
-## SCSSƒhƒ‰ƒCƒo[
-[Sass(SCSS)](http://sass-lang.com/)‚ðƒRƒ“ƒpƒCƒ‹‚µ‚Ü‚·B
+## SCSSãƒ‰ãƒ©ã‚¤ãƒãƒ¼
+[Sass(SCSS)](http://sass-lang.com/)ã‚’ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã—ã¾ã™ã€‚
 
- * ƒ\[ƒXŠg’£Žq
+ * ã‚½ãƒ¼ã‚¹æ‹¡å¼µå­
   * .scss
- * ƒRƒ“ƒpƒCƒ‹ŒãŠg’£Žq
+ * ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«å¾Œæ‹¡å¼µå­
    * .css
 
-## TypeScriptƒhƒ‰ƒCƒo[
-[TypeScript](https://www.typescriptlang.org/)‚ðƒRƒ“ƒpƒCƒ‹‚µ‚Ü‚·B
+## TypeScriptãƒ‰ãƒ©ã‚¤ãƒãƒ¼
+[TypeScript](https://www.typescriptlang.org/)ã‚’ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã—ã¾ã™ã€‚
 
-¦TypeScriptƒhƒ‰ƒCƒo[‚ðŽg—p‚·‚é‚É‚ÍA•Ê“r
+â€»TypeScriptãƒ‰ãƒ©ã‚¤ãƒãƒ¼ã‚’ä½¿ç”¨ã™ã‚‹ã«ã¯ã€åˆ¥é€”
 
 * [NodeJs](https://nodejs.org/en/download/)
 * [TypeScript](https://www.typescriptlang.org/index.html#download-links)
 
-‚ÌƒCƒ“ƒXƒg[ƒ‹‚ª•K—v‚Å‚·B
+ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãŒå¿…è¦ã§ã™ã€‚
 
- * ƒ\[ƒXŠg’£Žq
+ * ã‚½ãƒ¼ã‚¹æ‹¡å¼µå­
   * .ts
- * ƒRƒ“ƒpƒCƒ‹ŒãŠg’£Žq
+ * ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«å¾Œæ‹¡å¼µå­
    * .js
 

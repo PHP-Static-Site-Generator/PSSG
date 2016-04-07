@@ -47,11 +47,21 @@ class Project extends \PSSG\CLI\Base
         $PSSG = new \PSSG\Compile\PSSG;
         $PSSG->initialize($project_dir);
         $driver_exts = array_keys($PSSG->getDriverConfig());
-        foreach ($this->getFileList($project_dir, $driver_exts) as $file_name) {
-            $contents = $PSSG->compile($file_name);
-            $compiled_file = $PSSG->getCompiledFile($file_name);
-            $this->secho('[Compiled]'.$file_name.'->'.$compiled_file);
-            file_put_contents($compiled_file, $contents);
+        foreach ($this->getFileList($project_dir, $driver_exts) as list($ok, $file_name)) {
+
+            // @codeCoverageIgnoreStart
+            if ($ok) {
+            // @codeCoverageIgnoreEnd
+
+                $contents = $PSSG->compile($file_name);
+                $compiled_file = $PSSG->getCompiledFile($file_name);
+                file_put_contents($compiled_file, $contents);
+                $this->secho('[Compiled]'.realpath($file_name).'->'.realpath($compiled_file));
+            } else {
+                $compiled_file = $PSSG->getOutFile($file_name);
+                copy($file_name, $compiled_file);
+                $this->secho('[Copy]'.realpath($file_name).'->'.realpath($compiled_file));
+            }
         }
         $this->secho("Completed! {$project_dir}__outfile{$ds}");
     }
@@ -78,7 +88,7 @@ class Project extends \PSSG\CLI\Base
                     continue;
                 } elseif (realpath(dirname($fileinfo->getPathname())) === realpath($project_dir.'__outfile')) {
                     continue;
-                } elseif ($fileinfo->getPathname() === realpath($project_dir.'__pssg.php')) {
+                } elseif (realpath($fileinfo->getPathname()) === realpath($project_dir.DIRECTORY_SEPARATOR.'__pssg.php')) {
                     continue;
                 }
                 $ok = false;
@@ -88,10 +98,7 @@ class Project extends \PSSG\CLI\Base
                         break;
                     }
                 }
-                if (!$ok) {
-                    continue;
-                }
-                yield $fileinfo->getPathname();
+                yield [$ok, $fileinfo->getPathname()];
             }
         }
     }

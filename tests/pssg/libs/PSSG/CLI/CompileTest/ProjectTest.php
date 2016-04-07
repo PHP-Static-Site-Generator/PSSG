@@ -204,9 +204,11 @@ class ProjectTest extends testCaseBase
         $CompilePSSG->initialize(TEST_DATA);
         $driver_exts = array_keys($CompilePSSG->getDriverConfig());
         $res = [];
-        foreach ($CompileProject->getFileList(TEST_DATA, $driver_exts) as $row) {
-            $res[] = $row;
-            $this->free();
+        foreach ($CompileProject->getFileList(TEST_DATA, $driver_exts) as list($ok, $row)) {
+            if ($ok) {
+                $res[] = $row;
+                $this->free();
+            }
         }
 
         $this->assertEquals($res, array (
