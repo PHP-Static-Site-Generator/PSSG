@@ -1,0 +1,41 @@
+
+# コンパイルするファイルの拡張子
+.tpl:
+  # コンパイ後の拡張子
+  compiled_ext: .html
+  # 使用するドライバ
+  driver: Smarty
+  # ドライバオプション
+  option:
+    left_delimiter: "{%"
+    right_delimiter: "%}"
+    config_dir: <?php echo __DIR__.DIRECTORY_SEPARATOR;?>
+
+
+# コンパイルするファイルの拡張子
+.tpl.yml:
+  # コンパイ後の拡張子
+  compiled_ext: .html
+  # 使用するドライバ
+  driver: YmlSmarty
+  # ドライバオプション
+  option:
+    left_delimiter: "{%"
+    right_delimiter: "%}"
+    config_dir: <?php echo __DIR__.DIRECTORY_SEPARATOR;?>
+
+# コンパイルするファイルの拡張子
+.scss:
+  # コンパイ後の拡張子
+  compiled_ext: .css
+  # 使用するドライバ
+  driver: Scss
+
+# コンパイルするファイルの拡張子
+.ts:
+  # コンパイ後の拡張子
+  compiled_ext: .js
+  # 使用するドライバ
+  driver: TypeScript
+
+

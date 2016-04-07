@@ -1,0 +1,42 @@
+#!/usr/bin/php
+<?php
+/**
+ *
+ *
+ * PHP versions 5
+ *
+ *
+ * @category   %%project_category%%
+ * @package    %%project_name%%
+ * @subpackage %%subpackage_name%%
+ * @author     Suzunone <suzunone.eleven@gmail.com>
+ * @copyright %%your_project%%
+ * @license    MIT LICENSE
+ * @version    GIT: $Id$
+ * @link %%your_link%%
+ * @see %%your_see%%
+ * @since      Class available since Release 1.0.0
+*/
+namespace {
+    umask(0);
+    define('PSSG_BASE_DIR', __DIR__);
+    require __DIR__.'/libs/vendor/spyc/spyc.php';
+    require __DIR__.'/utils/autoload.php';
+
+}
+
+
+namespace PSSG\CLI{
+    $PSSG = new PSSG;
+    try {
+        if (!isset($argv[1])) {
+            throw new CommonException;
+        }
+        $PSSG->execute($argv[1]);
+    } catch (CommonException $e) {
+        $PSSG->help();
+    } catch (OptionException $e) {
+
+    }
+}
+

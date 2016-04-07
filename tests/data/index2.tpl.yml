@@ -1,0 +1,3 @@
+file_name: index.tpl
+page_variables:
+  header_title: 'Hello PSSG World.'
